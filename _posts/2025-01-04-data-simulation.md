@@ -20,13 +20,14 @@ type of distributed data etc.
 In order to start appreciating simulations we start by simulating data
 from the linear model:
 
-$$
-y_i \sim \mathcal{N}(a + b \cdot x_i , \sigma)
-$$
+![y_i \sim \mathcal{N}(a + b \cdot x_i , \sigma)](https://latex.codecogs.com/png.latex?y_i%20%5Csim%20%5Cmathcal%7BN%7D%28a%20%2B%20b%20%5Ccdot%20x_i%20%2C%20%5Csigma%29 "y_i \sim \mathcal{N}(a + b \cdot x_i , \sigma)")
 
-Here $y_i$ is our outcome of interest and $x_i$ is our independent
-variable. All other symbols a,b and $\sigma$ are parameters that we in
-the end want to estimate.
+Here ![y_i](https://latex.codecogs.com/png.latex?y_i "y_i") is our
+outcome of interest and
+![x_i](https://latex.codecogs.com/png.latex?x_i "x_i") is our
+independent variable. All other symbols a,b and
+![\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\sigma") are
+parameters that we in the end want to estimate.
 
 To simulate data from this model we choose values for our parameters and
 select a range of x-values that would make sense for the experimental
@@ -47,7 +48,8 @@ x = seq(0,100, length.out = N)
 
 Now to simulate data we use the distributions build into R. In the above
 we specified that the normal distribution, so we use the random number
-generator of the normal distribution to get responses $y_i$.
+generator of the normal distribution to get responses
+![y_i](https://latex.codecogs.com/png.latex?y_i "y_i").
 
 ``` r
 # generate y-values from our model and parameters
@@ -63,11 +65,13 @@ data.frame() %>%
   theme_classic()
 ```
 
-![](data-simulation_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](../images/data-simulation_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 Now that we have some simulated data, where we know the parameters
-i.e. a b and $\sigma$, we can try and fit the model. We start by doing
-this in the frequentist sense:
+i.e. a b and
+![\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\sigma"), we
+can try and fit the model. We start by doing this in the frequentist
+sense:
 
 ``` r
 # Calling the linear model and plotting as a table
@@ -97,7 +101,9 @@ summary(m1)
 
 Here we get the parameters; a (intercept) and b (the slope). These two
 estimates are not terribly off the values we put in which where 10 and 3
-respectively. To get the last parameter $\sigma$ we can do:
+respectively. To get the last parameter
+![\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\sigma") we can
+do:
 
 ``` r
 # getting the sigma estimate
@@ -118,7 +124,8 @@ understand the meaning of the parameters of a model.
 ## generalized simulations
 
 We start with the same linear model as before, but now simulate several
-parameter pairs (i.e. pairs of a,b and $\sigma$).
+parameter pairs (i.e. pairs of a,b and
+![\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\sigma")).
 
 ``` r
 # keep the number of data points constant (could also vary this)
@@ -140,7 +147,8 @@ df = parameters %>% rowwise() %>%
   mutate(x = list(seq(0,100, length.out = N))) %>% unnest(x)
 ```
 
-Now the last part is getting the responses i.e. $y_i$.
+Now the last part is getting the responses
+i.e. ![y_i](https://latex.codecogs.com/png.latex?y_i "y_i").
 
 ``` r
 # getting the y_i
@@ -169,7 +177,7 @@ df %>%
     ## Warning: Removed 605 rows containing missing values or values outside the scale range
     ## (`geom_point()`).
 
-![](data-simulation_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](../images//data-simulation_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 Hopefully its clear that the a parameter is the intersection i.e. the
 y-value when x = 0. The parameter b represents the slope of the line,
@@ -180,20 +188,26 @@ points, higher values represents greater spread.
 
 Now we do the same for a psychometric function to take an example a bit
 less known. The psychometric function is a function that maps continuous
-values \]$-\infty$; $\infty$\[ to probabilities \[0 ; 1\].
+values
+\]![-\infty](https://latex.codecogs.com/png.latex?-%5Cinfty "-\infty");
+![\infty](https://latex.codecogs.com/png.latex?%5Cinfty "\infty")\[ to
+probabilities \[0 ; 1\].
 
 The most common function to use is the cumulative normal distribution or
 the probit model with the functional form:
 
-$$
-p_i = 0.5 + 0.5 \cdot erf\left(\frac{x_i - \alpha }{\beta \cdot \sqrt{2}}\right)
-$$ Here $p_i$ represents the probability of answering 1, and x
-represents the independent variable that when increases increases the
-probability of responding 1.
+![p_i = 0.5 + 0.5 \cdot erf\left(\frac{x_i - \alpha }{\beta \cdot \sqrt{2}}\right)](https://latex.codecogs.com/png.latex?p_i%20%3D%200.5%20%2B%200.5%20%5Ccdot%20erf%5Cleft%28%5Cfrac%7Bx_i%20-%20%5Calpha%20%7D%7B%5Cbeta%20%5Ccdot%20%5Csqrt%7B2%7D%7D%5Cright%29 "p_i = 0.5 + 0.5 \cdot erf\left(\frac{x_i - \alpha }{\beta \cdot \sqrt{2}}\right)")
+
+Here ![p_i](https://latex.codecogs.com/png.latex?p_i "p_i") represents
+the probability of answering 1, and x represents the independent
+variable that when increases increases the probability of responding 1.
 
 In the same vain as with the normal distribution we simulate
-probabilities, from simulated values of the parameters ($\alpha$ &
-$\beta$) and the independent variable $x_i$.
+probabilities, from simulated values of the parameters
+(![\alpha](https://latex.codecogs.com/png.latex?%5Calpha "\alpha") &
+![\beta](https://latex.codecogs.com/png.latex?%5Cbeta "\beta")) and the
+independent variable
+![x_i](https://latex.codecogs.com/png.latex?x_i "x_i").
 
 ``` r
 #data points
@@ -219,14 +233,15 @@ Now importantly we can plot it ensuring ourselves that it makes sense
 data.frame() %>% ggplot(aes(x =x,y = p))+geom_point()+theme_classic()
 ```
 
-![](data-simulation_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](../images//data-simulation_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 The additional thing here is that we do not observe these probabilities,
 but the realization of these (i.e. the actual binary responses that come
 from these probabilities). In order to simulate this we need another
 probability density function (just as we used the normal distribution to
 get noise about our y_i’s) here the binominal distribution which
-converts probabilities to binary responses $y_i$:
+converts probabilities to binary responses
+![y_i](https://latex.codecogs.com/png.latex?y_i "y_i"):
 
 ``` r
 # generating binary responses from the probabilities above
@@ -244,7 +259,7 @@ data.frame() %>%
   geom_line(aes(x = x, y = p), col = "grey", alpha = 0.75, linewidth = 2)
 ```
 
-![](data-simulation_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](../images//data-simulation_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 Now we can again fit this using normal linear modeling.
 
@@ -295,7 +310,7 @@ data.frame(effects) %>%
   theme_minimal()
 ```
 
-![](data-simulation_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](../images//data-simulation_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
 ## generalized simulations
 
@@ -303,14 +318,18 @@ Now we can do the same step as we did with the linear model of plotting
 many different combinations of parameters values of the function. Before
 doing this we introduce a third parameter of the psychometric, which
 means that the functional relationship between our independent variable
-$x_i$ and the probability $p_i$ is now:
+![x_i](https://latex.codecogs.com/png.latex?x_i "x_i") and the
+probability ![p_i](https://latex.codecogs.com/png.latex?p_i "p_i") is
+now:
 
-$$
-p_i = \lambda + (1-2*\lambda) * \left(0.5 + 0.5 \cdot erf\left(\frac{x_i - \alpha }{\beta \cdot \sqrt{2}}\right)\right)
-$$
+![p_i = \lambda + (1-2\*\lambda) \* \left(0.5 + 0.5 \cdot erf\left(\frac{x_i - \alpha }{\beta \cdot \sqrt{2}}\right)\right)](https://latex.codecogs.com/png.latex?p_i%20%3D%20%5Clambda%20%2B%20%281-2%2A%5Clambda%29%20%2A%20%5Cleft%280.5%20%2B%200.5%20%5Ccdot%20erf%5Cleft%28%5Cfrac%7Bx_i%20-%20%5Calpha%20%7D%7B%5Cbeta%20%5Ccdot%20%5Csqrt%7B2%7D%7D%5Cright%29%5Cright%29 "p_i = \lambda + (1-2*\lambda) * \left(0.5 + 0.5 \cdot erf\left(\frac{x_i - \alpha }{\beta \cdot \sqrt{2}}\right)\right)")
 
-The 3 parameters $\lambda$, $\alpha$, $\beta$ are called lapse rate,
-threshold and slope respectively. This hopefully becomes clear below.
+The 3 parameters
+![\lambda](https://latex.codecogs.com/png.latex?%5Clambda "\lambda"),
+![\alpha](https://latex.codecogs.com/png.latex?%5Calpha "\alpha"),
+![\beta](https://latex.codecogs.com/png.latex?%5Cbeta "\beta") are
+called lapse rate, threshold and slope respectively. This hopefully
+becomes clear below.
 
 ``` r
 # keep the number of data points constant (could also vary this)
@@ -333,7 +352,8 @@ df = parameters %>% rowwise() %>%
   unnest(x)
 ```
 
-Now we calculate the latent (unobserved) probability, $p_i$.
+Now we calculate the latent (unobserved) probability,
+![p_i](https://latex.codecogs.com/png.latex?p_i "p_i").
 
 ``` r
 # define function based on functional relationship
@@ -363,15 +383,24 @@ df %>%
   geom_line(linewidth = 1.2)+theme_classic()
 ```
 
-![](data-simulation_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](../images//data-simulation_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
 
-Hopefully its clear that the $\alpha$ parameter is the x-value where the
-probability is 0.5 i.e. the x-value when y = 0. The parameter $\beta$
+Hopefully its clear that the
+![\alpha](https://latex.codecogs.com/png.latex?%5Calpha "\alpha")
+parameter is the x-value where the probability is 0.5 i.e. the x-value
+when y = 0. The parameter
+![\beta](https://latex.codecogs.com/png.latex?%5Cbeta "\beta")
 represents the slope of the line, higher b less steep lines.
 
-Lastly $\lambda$ represents the lapse rate and governs where the
-function starts and ends. i.e. when x -\> $-\infty$ y -\> $\lambda$ and
-when x -\> $\infty$ y -\> $1-\lambda$.
+Lastly
+![\lambda](https://latex.codecogs.com/png.latex?%5Clambda "\lambda")
+represents the lapse rate and governs where the function starts and
+ends. i.e. when x -\>
+![-\infty](https://latex.codecogs.com/png.latex?-%5Cinfty "-\infty") y
+-\> ![\lambda](https://latex.codecogs.com/png.latex?%5Clambda "\lambda")
+and when x -\>
+![\infty](https://latex.codecogs.com/png.latex?%5Cinfty "\infty") y -\>
+![1-\lambda](https://latex.codecogs.com/png.latex?1-%5Clambda "1-\lambda").
 
 ## Final remarks
 
