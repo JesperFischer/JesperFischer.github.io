@@ -1,21 +1,37 @@
-Data simulation
-================
-2024-08-17
+---
+excerpt_separator: <!--more-->
+---
 
-## This R markdown document is supposed to give an idea of how data simulation fits into the bayesian workflow.
 
-Data stimulation is not inherently Bayesian, but adopted by many
-Bayesian statisticians to ensure that the models used are sensible. In
-this R-markdown I demonstrate how data-simulation can be used for a
-simple linear regression and later for more complex models such as
-psychometric functions. It is important to stress the importance of
-simulations, as proper use of simulations can help answer many of the
-questions people have about their statistical or computational models.
-These questions could be what sample size would i need to detect an
-effect size of x, or what what happens to my model if i have a certain
-type of distributed data etc.
+(1) Data Simulation
+====================
+2025-01-04
 
-## Data simulation
+- [Overview.](/Data-Simulation/#overview)
+- [Simulation (Linear model).](/Data-Simulation/#simulation-linear-model)
+- [Generalized simulations (linear model).](/Data-Simulation/#generalized-simulations-linear-model)
+- [Psychometric functions.](/Data-Simulation/#psychometric-functions)
+- [Generalized simulations (psychometric functions).](/Data-Simulation/#generalized-simulations-psychometric-functions)
+- [Final remarks.](/Data-Simulation/#final-remarks)
+
+<!--more-->
+
+## Overview.
+
+This R markdown document is supposed to give an idea of how data
+simulation fits into the bayesian workflow. Data stimulation is not
+inherently Bayesian, but adopted by many Bayesian statisticians to
+ensure that the models used are sensible. In this R-markdown I
+demonstrate how data-simulation can be used for a simple linear
+regression and later for more complex models such as psychometric
+functions. It is important to stress the importance of simulations, as
+proper use of simulations can help answer many of the questions people
+have about their statistical or computational models. These questions
+could be what sample size would i need to detect an effect size of x, or
+what what happens to my model if i have a certain type of distributed
+data etc.
+
+## Simulation (Linear model).
 
 In order to start appreciating simulations we start by simulating data
 from the linear model:
@@ -65,7 +81,7 @@ data.frame() %>%
   theme_classic()
 ```
 
-![](../images/data-simulation_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](../images/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 Now that we have some simulated data, where we know the parameters
 i.e. a b and
@@ -121,7 +137,7 @@ investigate the meaning of our parameters. This is meant as an exercise
 to understand one of the ways one can use simulations, i.e. to
 understand the meaning of the parameters of a model.
 
-## generalized simulations
+## Generalized simulations (linear model).
 
 We start with the same linear model as before, but now simulate several
 parameter pairs (i.e. pairs of a,b and
@@ -177,14 +193,14 @@ df %>%
     ## Warning: Removed 605 rows containing missing values or values outside the scale range
     ## (`geom_point()`).
 
-![](../images//data-simulation_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](../images/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 Hopefully its clear that the a parameter is the intersection i.e. the
 y-value when x = 0. The parameter b represents the slope of the line,
 higher b, steeper lines. Lastly sigma represents the spread of data
 points, higher values represents greater spread.
 
-## Psychometric functions
+## Psychometric functions.
 
 Now we do the same for a psychometric function to take an example a bit
 less known. The psychometric function is a function that maps continuous
@@ -233,7 +249,7 @@ Now importantly we can plot it ensuring ourselves that it makes sense
 data.frame() %>% ggplot(aes(x =x,y = p))+geom_point()+theme_classic()
 ```
 
-![](../images//data-simulation_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](../images/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 The additional thing here is that we do not observe these probabilities,
 but the realization of these (i.e. the actual binary responses that come
@@ -259,7 +275,7 @@ data.frame() %>%
   geom_line(aes(x = x, y = p), col = "grey", alpha = 0.75, linewidth = 2)
 ```
 
-![](../images//data-simulation_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](../images/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 Now we can again fit this using normal linear modeling.
 
@@ -310,9 +326,9 @@ data.frame(effects) %>%
   theme_minimal()
 ```
 
-![](../images//data-simulation_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](../images/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
-## generalized simulations
+## Generalized simulations (psychometric functions).
 
 Now we can do the same step as we did with the linear model of plotting
 many different combinations of parameters values of the function. Before
@@ -383,7 +399,7 @@ df %>%
   geom_line(linewidth = 1.2)+theme_classic()
 ```
 
-![](../images//data-simulation_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](../images/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
 
 Hopefully its clear that the
 ![\alpha](https://latex.codecogs.com/png.latex?%5Calpha "\alpha")
@@ -402,7 +418,7 @@ and when x -\>
 ![\infty](https://latex.codecogs.com/png.latex?%5Cinfty "\infty") y -\>
 ![1-\lambda](https://latex.codecogs.com/png.latex?1-%5Clambda "1-\lambda").
 
-## Final remarks
+## Final remarks.
 
 This finishes the section on data simulation with two simple models.
 
