@@ -6,12 +6,14 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">You can find all my co-author articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
-
+<br>
 {% if site.author.github %}
-  <div class="wordwrap">Most of the publications are also stored with code for reproducible manuscripts, analyses, and plots;
-on my <a href="https://github.com/{{site.author.github}}">GitHub page</a>, or the Body Pain Perception Lab <a href="https://github.com/Body-Pain-Perception-Lab">GitHub page</a>.</div>
+  <div class="wordwrap">Most of the publications are also stored on my <a href="https://github.com/{{site.author.github}}">GitHub page</a>, or the Body Pain Perception Lab <a href="https://github.com/Body-Pain-Perception-Lab">GitHub page</a>.</div> 
+  <br>
+  In these repositories you will find reproducible manuscripts, analyses, and plots.
+
 {% endif %}
 {% include base_path %}
 

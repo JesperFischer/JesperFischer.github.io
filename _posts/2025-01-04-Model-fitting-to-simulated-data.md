@@ -2,17 +2,17 @@
 excerpt_separator: <!--more-->
 ---
 
+This R markdown document showcases how one can fit models to simulated data in R and Stan.
 
-(2) Model fitting to simulated data
-================
-2025-01-04
+ <!--more-->
+
+## Table of content
 
 - [Overview](/Model-fitting-to-simulated-data/#overview)
 - [Draws and summary statistics:](#draws-and-summary-statistics)
 - [Posterior predictive checks](#posterior-predictive-checks)
 - [Final remarks](#final-remarks)
 
-<!--more-->
 
 ## Overview
 

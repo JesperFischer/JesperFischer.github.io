@@ -151,3 +151,22 @@
     font-size: $type-size-7;
   }
 }
+
+/* research page buttons */
+.btn--research {
+  display: inline-block;
+  margin-bottom: 0.25em;
+  padding: 0.125em 0.25em;
+  color: $link-color; /* Use the site accent color for the text */
+  text-align: center;
+  text-decoration: none !important; /* Remove underline */
+  border: 1px solid;
+  border-color: $link-color; /* Use the site accent color for the border */
+  border-radius: $border-radius; /* Ensure it matches the site's border radius */
+  cursor: pointer;
+
+  &:hover {
+    color: #fff; /* Change text color to white when hovered */
+    background-color: $link-color !important; /* Use the site accent color for the background */
+  }
+}

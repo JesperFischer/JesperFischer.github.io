@@ -2,10 +2,12 @@
 excerpt_separator: <!--more-->
 ---
 
+This R markdown document gives an idea of how data
+simulation fits into the Bayesian workflow and how to perform this in R.
 
-(1) Data Simulation
-====================
-2025-01-04
+ <!--more-->
+ 
+## Table of content
 
 - [Overview.](/Data-Simulation/#overview)
 - [Simulation (Linear model).](/Data-Simulation/#simulation-linear-model)
@@ -14,13 +16,9 @@ excerpt_separator: <!--more-->
 - [Generalized simulations (psychometric functions).](/Data-Simulation/#generalized-simulations-psychometric-functions)
 - [Final remarks.](/Data-Simulation/#final-remarks)
 
-<!--more-->
-
 ## Overview.
 
-This R markdown document is supposed to give an idea of how data
-simulation fits into the bayesian workflow. Data stimulation is not
-inherently Bayesian, but adopted by many Bayesian statisticians to
+Data stimulation is not inherently Bayesian, but adopted by many Bayesian statisticians to
 ensure that the models used are sensible. In this R-markdown I
 demonstrate how data-simulation can be used for a simple linear
 regression and later for more complex models such as psychometric

@@ -9,37 +9,43 @@ redirect_from:
 
 {% include base_path %}
 
+[Download my CV here]()
+
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* M.S. in Cognitive science, Aarhus University, 2024
+* B.S. in Cognitive science, Aarhus University, 2022
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* 2024-Now: Research Assistent 
+  * Location: Center of Functionally Integrative Neuroscience
+  * Lab: Body pain perception
+  * Duties includes: Analysis, write-up of manuscripts, further developing the labs statistical knowledge. Using LLM in pain research
+  * Supervisor: Francesca Fardo
 
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+
+* 2022-Now: Collaboration
+  * Location: Heidelberg
+  * Activity: Analysis and write up of computational model. Development of experiment.
   
+* 2022-2024: Student Assistent 
+  * Location: Center of Functionally Integrative Neuroscience
+  * Lab: Body pain perception
+  * Duties includes: Analysis, write-up of manuscripts, further developing the labs statistical knowledge
+  * Supervisor: Francesca Fardo
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Statistical and computational analyses in R, Stan, MATLAB and python.
+  * Proficient in developing novel hierarchical Bayesian models in the probabilistic programming langauge Stan.
+  * Can build models that can test and conform with theories.
+
+* Development and enhancement of methodologies and experiments
+  * Developing experimental paradigms that are statistically powered, but also sound in answering the underlying hypotheses.
+  
+* Knowledge of human behavior and perception and their interactions.
 
 Publications
 ======
@@ -59,6 +65,3 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
