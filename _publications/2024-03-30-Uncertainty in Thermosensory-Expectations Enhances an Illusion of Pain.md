@@ -7,8 +7,9 @@ excerpt: 'Thermosensation, Thermal Grill Illusion, Probabilistic Learning, Uncer
 Predictive Coding'
 date: 2024-03-30
 venue: 'Pre-print'
+githuburl: 'https://github.com/Body-Pain-Perception-Lab/Thermal-Pain-Learning'
 paperurl: 'https://JesperFischer.github.io/files/Uncertainty-in-Thermosensory-Expectations.pdf'
-# citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 
 The human brain has a remarkable ability to learn and update its beliefs about the world. Here,
