@@ -32,4 +32,4 @@ For some time now—spanning significant portions of my [Master thesis](../files
 This involves developing multivariate models that allow for simultaneous analysis of all experimental data, minimizing information loss.
 
 
-While building a robust framework for these models is an ongoing process, I am committed to ensuring the reliability of my implementations. This reliability and rigor is also reflected in the [bayesian workflow blogposts](https://jesperfischer.github.io/year-archive/).
+While building a robust framework for these models is an ongoing process, I am committed to ensuring the reliability of my implementations. This reliability and rigor is also reflected in the [Bayesian-Workflow blogposts](https://jesperfischer.github.io/year-archive/).
