@@ -2,6 +2,8 @@
 excerpt_separator: <!--more-->
 ---
 
+- Bayesian Workflow
+
 This R markdown document gives an idea of how data
 simulation fits into the Bayesian workflow and how to perform this in R.
 
@@ -79,7 +81,7 @@ data.frame() %>%
   theme_classic()
 ```
 
-![](../images/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](../images/Bayesian-Workflow-Tutorials/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 Now that we have some simulated data, where we know the parameters
 i.e. a b and
@@ -191,7 +193,7 @@ df %>%
     ## Warning: Removed 605 rows containing missing values or values outside the scale range
     ## (`geom_point()`).
 
-![](../images/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](../images/Bayesian-Workflow-Tutorials/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 Hopefully its clear that the a parameter is the intersection i.e. the
 y-value when x = 0. The parameter b represents the slope of the line,
@@ -247,7 +249,7 @@ Now importantly we can plot it ensuring ourselves that it makes sense
 data.frame() %>% ggplot(aes(x =x,y = p))+geom_point()+theme_classic()
 ```
 
-![](../images/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](../images/Bayesian-Workflow-Tutorials/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 The additional thing here is that we do not observe these probabilities,
 but the realization of these (i.e. the actual binary responses that come
@@ -273,7 +275,7 @@ data.frame() %>%
   geom_line(aes(x = x, y = p), col = "grey", alpha = 0.75, linewidth = 2)
 ```
 
-![](../images/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](../images/Bayesian-Workflow-Tutorials/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 Now we can again fit this using normal linear modeling.
 
@@ -324,7 +326,7 @@ data.frame(effects) %>%
   theme_minimal()
 ```
 
-![](../images/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](../images/Bayesian-Workflow-Tutorials/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
 ## Generalized simulations (psychometric functions).
 
@@ -397,7 +399,7 @@ df %>%
   geom_line(linewidth = 1.2)+theme_classic()
 ```
 
-![](../images/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](../images/Bayesian-Workflow-Tutorials/04-01-2025--1-Data-Simulation_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
 
 Hopefully its clear that the
 ![\alpha](https://latex.codecogs.com/png.latex?%5Calpha "\alpha")

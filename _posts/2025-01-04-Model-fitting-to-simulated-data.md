@@ -2,6 +2,8 @@
 excerpt_separator: <!--more-->
 ---
 
+- Bayesian Workflow
+
 This R markdown document showcases how one can fit models to simulated data in R and Stan.
 
  <!--more-->
@@ -16,9 +18,9 @@ This R markdown document showcases how one can fit models to simulated data in R
 
 ## Overview
 
-This R markdown is for model fitting on simulated data.
 
-here we build on the [data simulation R-markdown](/Data-Simulation/) and introduce how to fit
+
+In this markdown we build on the [data simulation R-markdown](/Data-Simulation/) and introduce how to fit
 the simulated agents responses in that R-markdown in a Bayesian
 framework. This entails estimating the parameter values we put into the
 simulations, from our model. This exercise is thus similar to what was
@@ -53,7 +55,7 @@ data.frame() %>%
   theme_classic()
 ```
 
-![](../images/2025-01-04-Model-fitting-to-simulated-data_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](../images/Bayesian-Workflow-Tutorials/2025-01-04-Model-fitting-to-simulated-data_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 Now we want to build a Stan model that takes these x and y values and
 gives us estimates for our parameters a, b and
@@ -355,7 +357,7 @@ as_draws_df(fit$draws(c("a","b","sigma"))) %>%
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](../images/2025-01-04-Model-fitting-to-simulated-data_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](../images/Bayesian-Workflow-Tutorials/2025-01-04-Model-fitting-to-simulated-data_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 The take away here is that the main output of a stan model is the draws
 of the joint posterior (all the parameters) and that in these draws you
@@ -402,7 +404,7 @@ as_draws_df(fit$draws(c("a","b","sigma"))) %>%
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](../images/2025-01-04-Model-fitting-to-simulated-data_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](../images/Bayesian-Workflow-Tutorials/2025-01-04-Model-fitting-to-simulated-data_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 Or as densities:
 
@@ -423,7 +425,7 @@ as_draws_df(fit$draws(c("a","b","sigma"))) %>%
 
     ## Warning: Dropping 'draws_df' class as required metadata was removed.
 
-![](../images/2025-01-04-Model-fitting-to-simulated-data_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](../images/Bayesian-Workflow-Tutorials/2025-01-04-Model-fitting-to-simulated-data_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 Another way to investigate how the model fits the data is to examine
 whether it captures the trend of the data. Here we overlay the draws on
@@ -448,7 +450,7 @@ as_draws_df(fit$draws(c("a","b","sigma"))) %>%
 
     ## Warning: Dropping 'draws_df' class as required metadata was removed.
 
-![](../images/2025-01-04-Model-fitting-to-simulated-data_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](../images/Bayesian-Workflow-Tutorials/2025-01-04-Model-fitting-to-simulated-data_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 Note that in this plot we only plot the mean predictions of the model
 i.e. a + b \* x and the linear line that this implies and not the full
@@ -481,7 +483,7 @@ as_draws_df(fit$draws(c("a","b","sigma"))) %>%
 
     ## Warning: Dropping 'draws_df' class as required metadata was removed.
 
-![](../images/2025-01-04-Model-fitting-to-simulated-data_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](../images/Bayesian-Workflow-Tutorials/2025-01-04-Model-fitting-to-simulated-data_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 Looks good!
 
