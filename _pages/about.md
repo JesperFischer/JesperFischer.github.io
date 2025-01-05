@@ -28,7 +28,7 @@ Through my education in cognitive science I have developed a diverse skill set i
 Current projects and interests 
 ======
 
-For some time now—spanning significant portions of my [Master thesis](../files/Master-thesis.pdf) I have been exploring how to build models that fully leverage all the information contained within an experiment.
+For some time now, spanning significant portions of my [Master thesis](../files/Master-thesis.pdf), I have been exploring how to build models that fully leverage all the information contained within an experiment.
 This involves developing multivariate models that allow for simultaneous analysis of all experimental data, minimizing information loss.
 
 
