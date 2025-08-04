@@ -6,7 +6,7 @@ permalink: /publication/2025-04-08-A Hierarchical Multivariate Copula-based Fram
 excerpt: 'Copula, Multivariate, Hierarchical; Framework'
 date: 2025-04-08
 venue: 'Pre-print'
-githuburl: 'https://github.com/Body-Pain-Perception-Lab/Thermal-Pain-Learning'
+githuburl: 'https://anonymous.4open.science/r/Hierarchical-Multivariate-Copula-Framework-D746/README.md'
 paperurl: 'https://JesperFischer.github.io/files/CBM_8pager.pdf'
 citation: 'Ehmsen, J. F., Mitchell, A. G., Courtin, A. S., Krænge, C. E., Simonnet, C., & Fardo, F. (2025). Modelling perceptual uncertainty in a thermosensory illusion across the lifespan (p. 2025.07.10.664158). bioRxiv. https://doi.org/10.1101/2025.07.10.664158'
 ---
