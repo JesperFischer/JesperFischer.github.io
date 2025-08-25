@@ -36,7 +36,7 @@ author:
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0001-5395-309X"
   semantic         : # URL
-  pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=Ehmsen+JF&cauthor_id=39542193"
+  pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=jesper%20fischer%20ehmsen&sort=date&ac=yes"
   researchgate     : # URL
   scopus           : # URL
   github           : "JesperFischer"
@@ -50,7 +50,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : "jesperfischer.bsky.socal" # Replace this with you Bluesky username
+  bluesky          : "https://bsky.app/profile/jesperfischer.bsky.social" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
