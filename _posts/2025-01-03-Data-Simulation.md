@@ -1,4 +1,6 @@
 ---
+categories:
+  - Starting Off
 excerpt_separator: <!--more-->
 ---
 
