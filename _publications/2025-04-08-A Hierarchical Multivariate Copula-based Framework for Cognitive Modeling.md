@@ -5,7 +5,7 @@ category: manuscripts
 permalink: /publication/2025-04-08-A Hierarchical Multivariate Copula-based Framework for Cognitive Modeling
 excerpt: 'Copula, Multivariate, Hierarchical; Framework'
 date: 2025-04-08
-venue: 'Not-published nor preprinted'
+venue: 'In Preparation'
 githuburl: 'https://anonymous.4open.science/r/Hierarchical-Multivariate-Copula-Framework-D746/README.md'
 paperurl: 'https://JesperFischer.github.io/files/CBM_8pager.pdf'
 citation: ''

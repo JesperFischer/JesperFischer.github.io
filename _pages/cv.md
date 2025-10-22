@@ -19,7 +19,7 @@ Education
 Work experience
 ======
 
-* 2024-Now: Research Assistent 
+* 2024-Now: Research Assistant 
   * Location: Center of Functionally Integrative Neuroscience
   * Lab: Body pain perception
   * Duties includes: Analysis, write-up of manuscripts, further developing the labs statistical knowledge. Using LLM in pain research
@@ -30,7 +30,7 @@ Work experience
   * Location: Heidelberg
   * Activity: Analysis and write up of computational model. Development of experiment.
   
-* 2022-2024: Student Assistent 
+* 2022-2024: Student Assistant 
   * Location: Center of Functionally Integrative Neuroscience
   * Lab: Body pain perception
   * Duties includes: Analysis, write-up of manuscripts, further developing the labs statistical knowledge
