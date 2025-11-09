@@ -47,7 +47,7 @@ The concept of hierarchical models are quite simple and are best
 illustrated by a figure stolen from
 [here](https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/multilevel-ma.html)
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/Figure.PNG)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/Figure.PNG)<!-- -->
 
 Here the uppermost distribution represents the group level distribution
 for a parameter, and the individual smaller distributions below
@@ -108,7 +108,7 @@ df %>%
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 Individual data points for each subject.
 
@@ -120,7 +120,7 @@ df %>%
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 and lastly the group level (aggregating over subjects):
 
@@ -133,7 +133,7 @@ df %>%
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 Please note that one could fit these subjects individually and then
 combine their parameters estimates to gain a group level estimate. In
@@ -447,7 +447,7 @@ parameters %>% select(rhat,ess_bulk,ess_tail,div,tree,energy) %>%
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 No divergences, no tree depth, Rhat values close to 1 and effective
 sample sizes (ess\_\*) very high; looks good!
@@ -476,7 +476,7 @@ df %>%
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 This looks really good! Now we can also check the group level if we
 propagate the uncertainty from each individual. This is essentially
@@ -521,7 +521,7 @@ df %>% group_by(x) %>%
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 And with the prediction intervals:
 
@@ -536,7 +536,7 @@ df %>% group_by(x) %>%
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ## Hierarchical Implementation
 
@@ -732,7 +732,7 @@ mcmc_trace(fit$draws(c("mu_a","sigma_a",
                        "mu_sigma","sigma_sigma")))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
 The traceplots and the summary statistics do show kind of the same
 story. The sigma_sigma and mu_sigma parameters are quite badly
@@ -752,7 +752,7 @@ mcmc_pairs(fit$draws(c("mu_a","sigma_a","a[1]")),
            np = nuts_params(fit))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
 
 for the slope
 
@@ -761,7 +761,7 @@ mcmc_pairs(fit$draws(c("mu_b","sigma_b","b[1]")),
            np = nuts_params(fit))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 for the standard deviation of the normal distribution
 
@@ -770,7 +770,7 @@ mcmc_pairs(fit$draws(c("mu_sigma","sigma[1]","sigma_sigma")),
            np = nuts_params(fit))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
 
 What one wants to see ideally in these plots is one big “blob” of points
 for all the pairwise scatter plots and histograms that are somewhat
@@ -790,7 +790,7 @@ severe cases this behaviour will look like a funnel see plot from this
 blog](https://betanalpha.github.io/assets/case_studies/hierarchical_modeling.html).
 
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/funnel.PNG)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/funnel.PNG)<!-- -->
 
 Fortunatly this problem has a quite easy solution, and has to do with
 parameterization as mentioned in the diagnoistics markdown. The solution
@@ -990,7 +990,7 @@ mcmc_trace(fit$draws(c("mu_a","sigma_a",
                        "mu_sigma","sigma_sigma")))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
 
 And for good measure the pairplots.
 
@@ -1001,7 +1001,7 @@ mcmc_pairs(fit$draws(c("mu_a","sigma_a","a[1]")),
            np = nuts_params(fit))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
 
 for the slope
 
@@ -1010,7 +1010,7 @@ mcmc_pairs(fit$draws(c("mu_b","sigma_b","b[1]")),
            np = nuts_params(fit))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
 for the standard deviation of the normal distribution
 
@@ -1019,7 +1019,7 @@ mcmc_pairs(fit$draws(c("mu_sigma","sigma[1]","sigma_sigma")),
            np = nuts_params(fit))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 everything looks much better! Not perfect, but better and no
 divergences. Also Note that now the sampler as also moved all the way
@@ -1058,7 +1058,7 @@ df %>% group_by(x) %>% summarize(mean = mean(y_pred), se = sd(y_pred)/sqrt(n()))
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
 
 Looks really good!
 
@@ -1107,7 +1107,7 @@ df %>% mutate(draw = NA) %>%
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
 
 And their prediction intervals:
 
@@ -1121,7 +1121,7 @@ df %>% mutate(draw = NA) %>%
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Hierarchical-models_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
 
 Not to bad either!
 

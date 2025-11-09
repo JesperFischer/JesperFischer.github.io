@@ -417,7 +417,7 @@ that happens when fitting the model.
 mcmc_trace(fit$draws(c("a","b","sigma")))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 As can be seen in the traceplots the slope parameter has chains that do
 not mix, whereas the plots for a and sigma are great. What one looks for
@@ -591,7 +591,7 @@ We can also plot the traceplots again:
 mcmc_trace(fit$draws(c("a","b","sigma")))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 looks perfectly fine now.
 
@@ -629,7 +629,7 @@ rbind(
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 Here we see that something is not right. For the b-parameter the prior
 is excatly identical to the posterior, which indicates that we forgot to
@@ -670,7 +670,7 @@ as_draws_df(fit$draws(c("a","b","sigma"))) %>%
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 The posterior predictive checks also do not look great! Lets look at it
 as densities:
 
@@ -691,7 +691,7 @@ as_draws_df(fit$draws(c("a","b","sigma"))) %>%
 
     ## Warning: Dropping 'draws_df' class as required metadata was removed.
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 Not great! Lets plot them as conditional on the explanatory variable
 (x).
@@ -715,7 +715,7 @@ as_draws_df(fit$draws(c("a","b","sigma"))) %>%
 
     ## Warning: Dropping 'draws_df' class as required metadata was removed.
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 We can also overlay the 95 % prediction interval, by including sigma.
 
@@ -744,7 +744,7 @@ as_draws_df(fit$draws(c("a","b","sigma"))) %>%
 
     ## Warning: Dropping 'draws_df' class as required metadata was removed.
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 All these plots tell us that there is something wrong with the model.
 The posterior distribution of the parameters are not within the priors
@@ -806,7 +806,7 @@ data.frame() %>% ggplot(aes(x =x,y = p))+
   theme_classic()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
 
 These are the latent probabilities that we wont see with experimental
 data. We would only see the realization of these (i.e the binary
@@ -824,7 +824,7 @@ data.frame() %>% ggplot(aes(x =x,y = y))+
   geom_line(aes(x = x, y = p), col = "grey", alpha = 0.75, linewidth = 2)
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 Before we write our Stan model, we now have to make sure that we
 understand our model, and its parameters. From the data simulation
@@ -1000,7 +1000,7 @@ very low ess_bulk and ess_tail. Lets look at the trace plots
 mcmc_trace(fit$draws(c("alpha","beta","lambda")))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
 
 That is not hairy caterpillars.
 
@@ -1130,7 +1130,7 @@ Lets look at the traceplot
 mcmc_trace(fit$draws(c("alpha","beta","lambda")))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
 
 These look much better than before, but we still need to remove the last
 couple of divergences. and make the chains look better especially for
@@ -1222,7 +1222,7 @@ parameters are much better. Lets look at the traceplots.
 mcmc_trace(fit$draws(c("alpha","beta","lambda")))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
 This isn’t to great especially for the slope beta.
 
 Lets demonstrate the other option of changing the priors slightly:
@@ -1329,7 +1329,7 @@ fit
 mcmc_trace(fit$draws(c("alpha","beta","lambda")))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-05-Diagnostics_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
 No divergences, no tree_depth, and better traceplots.
 
 ## Final remarks

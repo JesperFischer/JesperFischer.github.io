@@ -74,7 +74,7 @@ And plotting it
 data.frame() %>% ggplot(aes(x =x,y = p))+geom_point()+theme_classic()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 These are the latent probabilities that we wont see when we would get
 experimental data.
@@ -93,7 +93,7 @@ data.frame() %>% ggplot(aes(x =x,y = y))+
   geom_line(aes(x = x, y = p), col = "grey", alpha = 0.75, linewidth = 2)
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 ## fitting a single model:
 
@@ -207,7 +207,7 @@ traceplots
 mcmc_trace(fit$draws(c("alpha","beta","lambda")))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 Not great, but it’ll do for now.
 
@@ -367,7 +367,7 @@ results %>%
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 Is not to bad, but some of the simulations did have divergences.
 
@@ -383,7 +383,7 @@ results %>%
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 For all parameters, but alpha this looks terrible.
 
@@ -402,7 +402,7 @@ results %>% mutate(across(c(mean, q5, q95),
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 Much better!
 
@@ -420,7 +420,7 @@ results %>% mutate(across(c(mean, q5, q95),
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 Not much of a pattern together with the fact that there weren’t that
 many divergent transisitions. Generally i would exclude all divergent
@@ -654,7 +654,7 @@ results %>%
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
 
 Is not to bad, but now we have a simulation that hit max_treedepth. We
 forget about that for now and plot the parameter recovery plot again
@@ -673,7 +673,7 @@ results %>% mutate(across(c(mean, q5, q95),
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
 Not too bad! Lets see which of which of the simulations had tree depth
 issues: transitions.
@@ -690,7 +690,7 @@ results %>% mutate(across(c(mean, q5, q95),
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-06-Parameter-Recovery_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 Not much to see. One could increase the max_treedepth argument and get
 good sampling across the board, this is left to the reader.

@@ -120,7 +120,7 @@ data %>%
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 We see that there is a correlation which is around 0.5.
 
@@ -267,7 +267,7 @@ rbind(df_cor %>% mutate(correlation = T),df_uncor %>%
   facet_wrap(~correlation)
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 And then the regression lines!
 
@@ -279,7 +279,7 @@ rbind(df_cor %>% mutate(correlation = T),
   theme_minimal()+facet_wrap(~correlation)
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 From these plots we see that the high negative correlation constrains
 the possible simulated values, such that the predicted mean responses
@@ -467,7 +467,7 @@ mcmc_trace(fit$draws(c("mu_a","sigma_a",
                        "mu_sigma","sigma_sigma")))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 And for good measure the pairplots
 
@@ -476,21 +476,21 @@ mcmc_pairs(fit$draws(c("mu_a","sigma_a","a[1]")),
            np = nuts_params(fit))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 ``` r
 mcmc_pairs(fit$draws(c("mu_b","sigma_b","b[1]")),
            np = nuts_params(fit))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 ``` r
 mcmc_pairs(fit$draws(c("mu_sigma","sigma_sigma","sigma[1]")),
            np = nuts_params(fit))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 Now also the posterior predictive checks:
 
@@ -523,7 +523,7 @@ df_cor %>% group_by(x) %>% summarize(mean = mean(y_pred),
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
 Looks really good!
 
@@ -571,7 +571,7 @@ df_cor %>% mutate(draw = NA) %>%
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
 
 With prediction intervals:
 
@@ -585,7 +585,7 @@ df_cor %>% mutate(draw = NA) %>%
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 Also looks good! Lets calculate the correlation that stan find between
 the slope and the intercept!
@@ -688,7 +688,7 @@ data.frame() %>%
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 Now one might say “But hey we put in -0.8 didn’t we?”. This would be
 correct, however there is some uncertainty in this, so we can go back to
@@ -1010,7 +1010,7 @@ df %>% mutate(eta = as.factor(eta)) %>%
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-08-Multivariate-priors-and-correlations_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 ## Final remarks
 

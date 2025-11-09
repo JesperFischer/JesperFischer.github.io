@@ -96,7 +96,7 @@ Now importantly we can plot it ensuring ourselves that it makes sense
 data.frame() %>% ggplot(aes(x =x,y = y))+geom_point()+theme_classic()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-07-Distributions_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-07-Distributions_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 The main thing to note here is that we choose a specific probability
 density function to simulate these data, i.e., the normal distribution.
@@ -207,7 +207,7 @@ data.frame() %>%
   theme_classic()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-07-Distributions_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-07-Distributions_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 One can of cause also fit a linear model again now on the log(RT).
 
@@ -430,7 +430,7 @@ VAS = rordbeta(N,brms::inv_logit_scaled(a+b*x),sigma, cutpoints = c(-2,2))
 plot(x,VAS)
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-07-Distributions_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-07-Distributions_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 we see that we obtain 0 and 1 responses as well as responses between 0
 and 1. Exactly what we expect from an experiment with VAS-ratings.
@@ -492,7 +492,7 @@ plot(ggpredict(m4))+
   geom_point(data = data.frame(x = x, VAS= VAS), aes(x = x, y = VAS))
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-07-Distributions_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-07-Distributions_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 ## Fitting the ordered beta in STAN:
 
@@ -717,7 +717,7 @@ as_draws_df(fit$draws(c("a","b","prec","cutzero","cutone"))) %>%
 
     ## Warning: Dropping 'draws_df' class as required metadata was removed.
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-07-Distributions_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-07-Distributions_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 Lets do this a couple of times to see the uncertainty:
 
@@ -775,7 +775,7 @@ results %>%   ggplot()+
   theme_minimal()
 ```
 
-![](../images/Bayesian-Workflow-Tutorials/2025-01-07-Distributions_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](/images/Bayesian-Workflow-Tutorials/2025-01-07-Distributions_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
 
 Looks very much like the frequentist plot! Lets overlay it:
 
