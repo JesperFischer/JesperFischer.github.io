@@ -1,12 +1,12 @@
 ---
 title: "Current Projects"
 permalink: /current-projects/
-layout: collection
-entries_layout: grid
-collection: projects
-sort_by: title
-sort_order: reverse
+layout: archive
 author_profile: true
 ---
 
 Below are my current research projects and studies:
+
+{% for project in site.projects %}
+  {% include archive-single-project.html %}
+{% endfor %}
